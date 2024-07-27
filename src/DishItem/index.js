@@ -28,7 +28,7 @@ const DishItem = ({
   }
 
   const renderControllerButton = () => (
-    <div className="controller-container">
+    <div className="controller-container d-flex align-items-center bg-success">
       <button className="button" type="button" onClick={onDecreaseQuantity}>
         -
       </button>
@@ -40,7 +40,7 @@ const DishItem = ({
   )
 
   return (
-    <li className="dish-item-container">
+    <li className="mb-3 p-3 dish-item-container d-flex">
       <div
         className={`veg-border ${dishType === 1 ? 'non-veg-border' : ''} me-3`}
       >
@@ -54,14 +54,14 @@ const DishItem = ({
         <p className="dish-description">{dishDescription}</p>
         {dishAvailability && renderControllerButton()}
         {!dishAvailability && (
-          <p className="not-availability-text">Not available</p>
+          <p className="not-availability-text text-danger">Not available</p>
         )}
         {addonCat.length !== 0 && (
           <p className="addon-availability-text">Customizations available</p>
         )}
       </div>
 
-      <p className="dish-calories">{dishCalories} calories</p>
+      <p className="dish-calories text-warning">{dishCalories} calories</p>
       <img className="dish-image" alt={dishName} src={dishImage} />
     </li>
   )

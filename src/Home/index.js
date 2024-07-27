@@ -63,7 +63,9 @@ const Home = () => {
     }))
 
   const fetchRestaurantApi = async () => {
-    const api = 'https://apis2.ccbp.in/restaurant-app/restaurant-menu-list-details'
+    const api =
+      'https://apis2.ccbp.in/restaurant-app/restaurant-menu-list-details'
+
     const apiResponse = await fetch(api)
     const data = await apiResponse.json()
     const updatedData = getUpdatedData(data[0].table_menu_list)
@@ -95,7 +97,10 @@ const Home = () => {
           key={eachCategory.menuCategoryId}
           onClick={onClickHandler}
         >
-          <button type="button" className="tab-category-button">
+          <button
+            type="button"
+            className="mt-0 mb-0 ms-2 me-2 tab-category-button"
+          >
             {eachCategory.menuCategory}
           </button>
         </li>
@@ -108,7 +113,7 @@ const Home = () => {
     )
 
     return (
-      <ul className="dishes-list-container">
+      <ul className="m-0 d-flex flex-column dishes-list-container">
         {categoryDishes.map(eachDish => (
           <DishItem
             key={eachDish.dishId}
@@ -133,7 +138,7 @@ const Home = () => {
   ) : (
     <div className="home-background">
       <Header cartItems={cartItems} />
-      <ul className="tab-container">{renderTabMenuList()}</ul>
+      <ul className="m-0 ps-0 d-flex tab-container">{renderTabMenuList()}</ul>
       {renderDishes()}
     </div>
   )

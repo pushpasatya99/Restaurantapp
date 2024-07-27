@@ -1,24 +1,16 @@
 .dish-item-container {
-  display: flex;
-  flex-direction: row;
+  border: 1px solid gray;
+  border-radius: 12px;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border: 2px solid #c4cdcf;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .veg-border {
   border: 1px solid #00923f;
   align-self: flex-start;
-  margin-right: 12px;
 }
 
 .non-veg-border {
   border: 1px solid #92282a;
-  margin-right: 12px;
 }
 
 .veg-round {
@@ -45,10 +37,10 @@
 }
 
 .dish-currency-price {
-  color: #524a47;
+  color: #525252;
   font-weight: 600;
   font-family: 'Roboto';
-  font-size: 17px;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -57,55 +49,46 @@
   color: #bfc3c7;
   font-weight: 500;
   font-family: 'Roboto';
-  font-size: 17px;
-  margin-top: 0px;
+  font-size: 16px;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
 .controller-container {
-  display: flex;
-  flex-direction: row;
+  width: fit-content;
+  min-width: 150px;
   justify-content: space-between;
-  align-items: center;
-  width: 150px;
-  height: 6.5vh;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
-  background-color: #00923f;
+  padding: 10px;
   border-radius: 50px;
-  margin-bottom: 15px;
 }
 
 .button {
+  padding: 5px;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .quantity {
   margin: 0 10px;
-  color: #ffffff;
+  color: #fff;
   font-size: 18px;
 }
 
 .not-availability-text {
   font-weight: 500;
   font-size: 18px;
-  margin: 5px;
-  margin-bottom: 30px;
-  color: #db404f;
+  margin: 5px 0;
 }
 
 .addon-availability-text {
   font-weight: 500;
   font-size: 18px;
-  margin: 5px;
+  margin: 5px 0;
   color: #734ff4;
 }
 
@@ -116,54 +99,11 @@
   font-family: 'Roboto';
   font-size: 18px;
   align-self: center;
-  margin-right: 120px;
-  color: #fc7544;
 }
 
 .dish-image {
-  width: 160px;
-  height: 175px;
-  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
   align-self: flex-start;
-}
-
-@media screen and (max-width: 576px) {
-  .dish-name {
-    font-size: 25px;
-  }
-
-  .dish-currency-price {
-    font-size: 19px;
-  }
-
-  .quantity {
-    font-size: 21px;
-  }
-
-  .dish-description {
-    font-size: 22px;
-    font-weight: 500;
-  }
-
-  .not-availability-text {
-    font-size: 19px;
-  }
-
-  .addon-availability-text {
-    font-size: 20px;
-  }
-
-  .dish-calories {
-    font-size: 24px;
-    padding-right: 150px;
-    font-weight: 700;
-    margin: 0px;
-    margin-left: 5px;
-  }
-
-  .dish-image {
-    height: 150px;
-    width: 150px;
-    margin: 0px;
-  }
 }
